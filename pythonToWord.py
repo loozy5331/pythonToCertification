@@ -20,9 +20,8 @@ for row in table.rows:
 pictureStart = table.cell(0, 0)
 pictureEnd = table.cell(4, 2)
 picture = pictureStart.merge(pictureEnd)
-pictureRun = picture.paragraphs[0].add_run("사진")
-pictureRun.font.size = Pt(12)
-pictureRun.bold = True
+pictureRun = picture.paragraphs[0].add_run()
+pictureRun.add_picture("test.jpg", width=Cm(3), height=Cm(3))
 
 titleStart = table.cell(0, 3)
 titleEnd = table.cell(1, 7)
